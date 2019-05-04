@@ -1,0 +1,109 @@
+.wholeContainer{
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(ellipse,red 1%,white 90%);
+    margin-top: 0px;
+    position: absolute;    
+}
+
+.animateContainer{
+    animation: heartbeat 1s infinite;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    width: 70vw;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+    .boxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1em;
+        color: rgb(252, 249, 249);
+    
+        .subBoxes{
+            background: rgb(165, 144, 144);
+            border-radius: 0.3em;
+            text-align: center;
+            font-size: 6em;
+            padding-top: 50%;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.container>.hours>.subBoxes{
+    background: rgb(29, 29, 29);
+}
+
+.container>.minutes>.subBoxes{
+    background: rgb(78, 77, 77);
+}
+
+.container>.seconds>.subBoxes{
+    background: rgb(156, 156, 156);
+}
+
+.container>.minseconds>.subBoxes{
+    background: rgb(234, 235, 233);
+    color: rgb(46, 45, 45);
+}
+
+.controllers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    width: 30vw;
+    height: 10vh;
+    align-content: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+    .controls{
+        background: rgb(7, 125, 243);
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 90%;
+        height: 60%;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .controls:hover{
+        background: rgb(245, 56, 56);
+        border-radius: 40%;
+    }
+}
+
+@keyframes heartbeat {
+    0%{
+        background-image: radial-gradient(ellipse,red 1%,white 20%);
+    }
+    20%{
+        background-image: radial-gradient(ellipse,red 10%,white 30%);
+    }
+    40%{
+        background-image: radial-gradient(ellipse,white 2%,rgb(255, 64, 64) 20%,white 40%);
+    }
+    60%{
+        background-image: radial-gradient(ellipse,white 4%,rgb(243, 112, 112) 30%,white 50%);
+    }
+    80%{
+        background-image: radial-gradient(ellipse,white 6%,rgb(253, 171, 171) 40%,white 60%);
+    }
+    100%{
+        background-image: radial-gradient(ellipse,white 7%,rgb(248, 196, 196) 100%,white 0%);
+    }
+}
+

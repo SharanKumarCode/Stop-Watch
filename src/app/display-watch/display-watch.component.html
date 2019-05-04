@@ -1,0 +1,24 @@
+<div class = "wholeContainer">
+<div class="container">
+  <div class="hours boxes">
+    <div class="tens subBoxes">{{(time.hours.toString()).length === 2 ? time.hours.toString().charAt(0) : 0}}</div>
+    <div class="ones subBoxes">{{time.hours.toString().substr(-1)}}</div>
+  </div>
+  <div class="minutes boxes">
+      <div class="tens subBoxes">{{(time.minutes.toString()).length === 2 ? time.minutes.toString().charAt(0) : 0}}</div>
+      <div class="ones subBoxes">{{time.minutes.toString().substr(-1)}}</div>
+  </div>
+  <div class="seconds boxes">
+      <div class="tens subBoxes">{{(time.seconds.toString()).length === 2 ? time.seconds.toString().charAt(0) : 0}}</div>
+      <div class="ones subBoxes">{{time.seconds.toString().substr(-1)}}</div>
+  </div>
+  <div class="minseconds boxes">
+      <div class="tens subBoxes">{{(time.minseconds.toString()).length === 2 ? time.minseconds.toString().charAt(0) : 0}}</div>
+      <div class="ones subBoxes">{{time.minseconds.toString().substr(-1)}}</div>
+  </div>
+</div>
+<div class="controllers">
+  <div (click)="toggleWatch()" class="startPause controls">{{watchStatus}}</div>
+  <div (click)="resetTimer()" class="Reset controls">RESET</div>
+</div>
+</div>
